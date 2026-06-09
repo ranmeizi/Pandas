@@ -20,9 +20,10 @@
 const path = require('path');
 
 const PORT = process.env.WSPROXY_PORT || 5999;
+// 同时允许 127.0.0.1 与本机网卡 IP，避免 char 自动检测 IP 时 wsProxy 拒绝连接
 const ALLOW =
 	process.env.WSPROXY_ALLOW ||
-	'127.0.0.1:6900,127.0.0.1:6121,127.0.0.1:5121';
+	'127.0.0.1:6900,127.0.0.1:6121,127.0.0.1:5121,192.168.240.211:6900,192.168.240.211:6121,192.168.240.211:5121';
 const THREADS = process.env.WSPROXY_THREADS || 1;
 
 module.exports = {
