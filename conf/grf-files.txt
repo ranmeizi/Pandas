@@ -56,4 +56,4 @@
 // C:\Program Files\Gravity\RO\          RIGHT! 这是正确的
 // C:\Program Files\Gravity\RO\data\     ERROR! 这是错误的
 //--------------------------------------------------------------
-//data_dir: C:\Program Files\Gravity\RO\
+data_dir: /home/aidlux/roBrowserLegacy-RemoteClient-JS\
