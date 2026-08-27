@@ -9,12 +9,9 @@
  * For detailed guidance on these check http://rathena.org/wiki/SRC/config/
  **/
 
-#ifndef PACKETVER
-	/// Do NOT edit this line! To set your client version, please do this instead:
-	/// In Windows: Add this line in your src\custom\defines_pre.hpp file: #define PACKETVER YYYYMMDD
-	/// In Linux: The same as above or run the following command: ./configure --enable-packetver=YYYYMMDD
-	#define PACKETVER 20170614
-#endif
+// 强制覆盖 cmake -DPACKETVER 以及 src/custom/defines_pre.hpp 里的旧日期
+#undef PACKETVER
+#define PACKETVER 20170614
 
 #ifndef PACKETVER_RE
 	/// From November 2015 only RagexeRE are supported.
@@ -44,6 +41,7 @@
 #if PACKETVER >= 20110817
 	/// Comment to disable the official packet obfuscation support.
 	/// This requires PACKETVER 2011-08-17 or newer.
+	#undef PACKET_OBFUSCATION
 	#ifndef PACKET_OBFUSCATION
 		// OpenKore / 私服：关闭混淆，避免进图 Timeout
 		//#define PACKET_OBFUSCATION
