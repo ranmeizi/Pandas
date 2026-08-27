@@ -87,8 +87,10 @@ Thumbs.db
 /src/common/obj_sql
 /src/common/version.hpp
 
-# /src/custom/
-/src/custom
+# /src/custom/ 默认忽略本地定制；PACKETVER 必须进仓库，否则手机 pull 不到
+/src/custom/*
+!/src/custom/defines_pre.hpp
+!/src/custom/defines_post.hpp
 
 # /src/login/
 /src/login/Makefile

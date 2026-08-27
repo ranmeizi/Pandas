@@ -5,11 +5,8 @@
 #define CONFIG_CUSTOM_DEFINES_PRE_HPP
 
 /**
- * rAthena configuration file (http://rathena.org)
- * For detailed guidance on these check http://rathena.org/wiki/SRC/config/
+ * PACKETVER 以 src/config/packets.hpp 为准，不要在这里写死日期。
+ * 写死会导致 cmake / packets.hpp 被覆盖，map 进图包对不上。
  **/
-
-#define PACKETVER 20150916
-//#define PACKETVER_RE
 
 #endif /* CONFIG_CUSTOM_DEFINES_PRE_HPP */
