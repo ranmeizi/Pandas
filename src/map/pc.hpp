@@ -469,7 +469,6 @@ public:
 		unsigned int killer : 1;
 		unsigned int killable : 1;
 		unsigned int godmode : 1; // @godmode: remain targetable, take no HP damage
-		unsigned int godmode : 1; // @godmode: remain targetable, incoming HP damage is ignored
 		unsigned int doridori : 1;
 		unsigned int ignoreAll : 1;
 		unsigned int debug_remove_map : 1; // temporary state to track double remove_map's [FlavioJS]
