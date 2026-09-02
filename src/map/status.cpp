@@ -1481,6 +1481,12 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 		ap = status->ap;
 	}
 
+	if (hp && target->type == BL_PC) {
+		map_session_data *tsd = BL_CAST(BL_PC, target);
+		if (tsd && tsd->state.godmode)
+			hp = 0; // Still a valid target; HP is not reduced.
+	}
+
 	if (!hp && !sp && !ap)
 		return 0;
 

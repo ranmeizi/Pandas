@@ -1048,6 +1048,12 @@ Body:
   - Command: monsterignore
     Aliases:
       - battleignore
+  - Command: godmode
+    Aliases:
+      - nodamage
+    Help: |
+      开关真正的无敌: 魔物仍可锁定并攻击你 (不会因为锁不到而传送跑掉), 但你的 HP 不会减少
+      测 MVP 时请关掉 @monsterignore, 再用本指令
   - Command: accinfo
     Aliases:
       - accountinfo

@@ -8894,6 +8894,23 @@ ACMD_FUNC(monsterignore)
 
 	return 0;
 }
+
+/*==========================================
+ * @godmode / @nodamage
+ * Remain a valid attack target, but take no HP damage.
+ *------------------------------------------*/
+ACMD_FUNC(godmode)
+{
+	nullpo_retr(-1, sd);
+
+	sd->state.godmode = !sd->state.godmode;
+	if (sd->state.godmode)
+		clif_displaymessage(fd, "Godmode ON: monsters can still attack you, HP will not decrease.");
+	else
+		clif_displaymessage(fd, "Godmode OFF.");
+
+	return 0;
+}
 /*==========================================
  * @fakename
  * => Gives your character a fake name. [Valaris]
@@ -11682,6 +11699,7 @@ void atcommand_basecommands(void) {
 		ACMD_DEF(mapflag),
 		ACMD_DEF(me),
 		ACMD_DEF(monsterignore),
+		ACMD_DEF(godmode),
 		ACMD_DEF(fakename),
 		ACMD_DEF(size),
 		ACMD_DEF(showexp),
