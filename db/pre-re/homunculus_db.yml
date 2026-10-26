@@ -306,9 +306,9 @@ Body:
         EvolutionMaximum: 10
       - Type: Int
         Base: 11
-        GrowthMinimum: 1
+        GrowthMinimum: 30
         GrowthMaximum: 30
-        EvolutionMinimum: 1
+        EvolutionMinimum: 10
         EvolutionMaximum: 10
       - Type: Dex
         Base: 11
